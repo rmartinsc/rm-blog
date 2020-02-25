@@ -6,7 +6,7 @@ from django.utils import timezone
 
 STATUS = (
     (0,"Draft"),
-    (1,"Publish")
+    (1,"Published")
 )
 
 class Post(models.Model):
@@ -24,6 +24,7 @@ class Post(models.Model):
 
     def publish(self):
         self.published_date = timezone.now()
+        self.status = 1
         self.save()
 
     def __str__(self):
