@@ -10,4 +10,4 @@ def post_list(request):
 
 class PostDetail(generic.DetailView):
     model = Post
-    template_name = 'post_detail.html'
+    template_name = 'blog/post_detail.html'
